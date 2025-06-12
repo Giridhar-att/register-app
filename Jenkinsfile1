@@ -74,7 +74,7 @@ steps {
                }
            }
        }
-stage("cleanup Artifacts"{
+stage("cleanup Artifacts"){
     steps {
       script{
 		sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
@@ -82,6 +82,8 @@ stage("cleanup Artifacts"{
 }
     }
 }
+
+stage("trigger Cd pipeline")
 
   }
 }
